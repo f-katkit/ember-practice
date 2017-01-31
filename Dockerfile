@@ -17,7 +17,9 @@ RUN \
   apt-get upgrade -y -qq && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget && \
+  apt-get install -y byobu curl git htop man unzip vim wget libfontconfig1-dev automake python-dev && \
+  git clone https://github.com/facebook/watchman.git && cd watchman && ./autogen.sh && ./configure && \
+  make && make install && \
   git clone https://github.com/riywo/anyenv $ANYENV_HOME && \
   echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc && \
   echo 'eval "$(anyenv init -)"' >> ~/.bashrc && \
