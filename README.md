@@ -10,7 +10,11 @@ cd ember-practice
 ## quick start ember 2.11 practice
 ### run container
 ```
-docker run -it  -p 4200:4200 -p 49153:49153 -v $(pwd):/root/ember fkatkit/ember-practice:latest
+# npm install
+docker run -it -v $(pwd):/root/ember fkatkit/ember-practice:latest npm install
+
+# run container
+docker run -it -p 4200:4200 -p 49153:49153 -v $(pwd):/root/ember fkatkit/ember-practice:latest npm install
 ```
 
 docker pull fkatkit/ember-practice

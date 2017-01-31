@@ -55,4 +55,4 @@ RUN \
 
 EXPOSE 4200 49153
 
-CMD ["npm", "install", "&&", "/root/.anyenv/envs/ndenv/shims/ember", "server", "--host", "0.0.0.0", "--live-reload-port", "49153"]
+CMD ["/root/.anyenv/envs/ndenv/shims/ember", "server", "--host", "0.0.0.0", "--live-reload-port", "49153"]
