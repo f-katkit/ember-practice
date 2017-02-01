@@ -1,9 +1,9 @@
 ## https://guides.emberjs.com/v2.11.0/getting-started/quick-start/
 
 # ember generate
-ember generate -Y template application
-ember generate -Y route scientists
-ember generate -Y component people-list
+ember generate template application
+ember generate route scientists
+ember generate component people-list
 
 # copy sample sources
 cp -f quickstart-sample/app/templates/application.hbs app/templates/application.hbs
