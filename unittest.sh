@@ -2,16 +2,13 @@
 npm install -g --save-dev testem
 npm install -g --save-dev phantomjs-prebuilt
 
-# create ember project
-ember new winebar
-cd winebar
-
 # install QUnit
 ember install ember-cli-qunit ember-cli-es5-shim
+ember g test-helper make-people-objects
 
-# generate component
-ember generate component wine-stock
+# copy source files
+cp -f unittest-sample/tests/helpers/make-people-objects.js /tests/helpers/make-people-objects.js
+cp -f unittest-sample/tests/integration/components/people-list-test.js tests/integration/components/people-list-test.js
 
-ember test --server -m 'Integration | Component | wine stock'
-
-ember server
+# run test
+# ember test
